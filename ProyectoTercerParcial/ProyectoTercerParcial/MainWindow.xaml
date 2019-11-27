@@ -1,0 +1,36 @@
+﻿<Window x:Class="ProyectoTercerParcial.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoTercerParcial"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="grdgeneral">
+        <ComboBox x:Name="cbSEPE" HorizontalAlignment="Left" Margin="480,40,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CbSEPE_SelectionChanged">
+            <ComboBoxItem>Serie</ComboBoxItem>
+            <ComboBoxItem>Pelicula</ComboBoxItem>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="480,10,0,0" TextWrapping="Wrap" Text="Agregar" VerticalAlignment="Top"/>
+        <Button x:Name="btnaceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="616,40,0,0" VerticalAlignment="Top" Width="75" Click="Btnaceptar_Click"/>
+        <Grid x:Name="grdagregar" HorizontalAlignment="Left" Height="281" Margin="278,105,0,0" VerticalAlignment="Top" Width="506"/>
+
+        <ListView x:Name="listdatos" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="242" SelectionChanged="Listdatos_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Titulo}" Header="Titulo" Width="170"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Año}" Header="Año" Width="70"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btnasc" Content="↑" HorizontalAlignment="Left" Margin="267,10,0,0" VerticalAlignment="Top" Width="75" Click="Btnasc_Click"/>
+        <Button x:Name="btndes1" Content="↓" HorizontalAlignment="Left" Margin="267,40,0,0" VerticalAlignment="Top" Width="75" Click="Btndes_Click_1"/>
+        <Button x:Name="btnaz" Content="A-Z" HorizontalAlignment="Left" Margin="358,10,0,0" VerticalAlignment="Top" Width="75" Click="Btnaz_Click"/>
+        <Button x:Name="btnza" Content="Z-A" HorizontalAlignment="Left" Margin="358,40,0,0" VerticalAlignment="Top" Width="75" Click="Btnza_Click"/>
+        <Button Visibility="Hidden"  x:Name="btneditar"  Content="Editar" HorizontalAlignment="Left" Margin="278,391,0,0" VerticalAlignment="Top" Width="75" Click="Btneditar_Click"/>
+        <Button Visibility="Hidden"  x:Name="btneliminar"  Content="Eliminar" HorizontalAlignment="Left" Margin="480,391,0,0" VerticalAlignment="Top" Width="75" Click="Btneliminar_Click"/>
+        <Button Visibility="Hidden"  x:Name="btncancelar1"  Content="Cancelar" HorizontalAlignment="Left" Margin="580,391,0,0" VerticalAlignment="Top" Width="75" Click="Btncancelar1_Click"/>
+        <Button Visibility="Hidden"  x:Name="btnaceptar1"  Content="Aceptar" HorizontalAlignment="Left" Margin="379,391,0,0" VerticalAlignment="Top" Width="75" Click="Btnaceptar1_Click"/>
+
+    </Grid>
+</Window>
